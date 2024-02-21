@@ -1,0 +1,12 @@
+{
+    "Header.Pizza":"Beef Cheese",
+    "Product.Cheese":"Cheese",
+    "Product.Sausage":"Sausage",
+    "Product.Olive":"Olive",
+    "Product.Pepper":"Pepper",
+    "Delivery.Duration":"20 min",
+    "Delivery.Title":"Delivery",
+    "Explain.Pizza":"Meat lover, get ready meet your Pizza !",
+    "Amount":"$ 5.98",
+    "Button.Title":"ADD TO CART"
+}

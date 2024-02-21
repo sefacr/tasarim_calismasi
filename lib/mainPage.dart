@@ -41,6 +41,13 @@ class _mainPageState extends State<mainPage> {
 
   @override
   Widget build(BuildContext context) {
+    var screenDetail = MediaQuery.of(context); 
+    final double screenHeight = screenDetail.size.height;
+    final double screenWidth = screenDetail.size.width;
+
+    print(screenHeight);
+    print(screenWidth);
+
     return Scaffold(
       appBar: AppBar(
         title: Text("Pizza",style: TextStyle(color: writeColor1, fontWeight: FontWeight.bold, fontFamily: "Pacifico", fontSize: 22)),
@@ -50,7 +57,7 @@ class _mainPageState extends State<mainPage> {
       body: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.only(top: 16),
+            padding: EdgeInsets.only(top: screenHeight / 43), // bu şekilde dinamik size verebiliyoruz
             child: Text("Beef Cheese", style: TextStyle(fontSize: 36, color: mainColor, fontWeight: FontWeight.bold),),
           ),
           
