@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-
 import 'package:dart_dersleri/colors.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class mainPage extends StatefulWidget {
   const mainPage({super.key});
@@ -48,6 +48,8 @@ class _mainPageState extends State<mainPage> {
     print(screenHeight);
     print(screenWidth);
 
+    var d = AppLocalizations.of(context);
+
     return Scaffold(
       appBar: AppBar(
         title: Text("Pizza",style: TextStyle(color: writeColor1, fontWeight: FontWeight.bold, fontFamily: "Pacifico", fontSize: 22)),
@@ -58,7 +60,7 @@ class _mainPageState extends State<mainPage> {
         children: [
           Padding(
             padding: EdgeInsets.only(top: screenHeight / 43), // bu şekilde dinamik size verebiliyoruz
-            child: Text("Beef Cheese", style: TextStyle(fontSize: 36, color: mainColor, fontWeight: FontWeight.bold),),
+            child: Text(d!.headerPizza, style: TextStyle(fontSize: 36, color: mainColor, fontWeight: FontWeight.bold),),
           ),
           
           Padding(
@@ -88,10 +90,10 @@ class _mainPageState extends State<mainPage> {
                 ),
                 */
                 //customTextButton("Cheese", () {}),
-                ChipButton(text: "Cheese"),
-                customTextButton("Sausage", () {}),
-                customTextButton("Olive", () {}),
-                customTextButton("Pepper", () {}),
+                ChipButton(text: d.productCheese),
+                customTextButton(d.productSausage, () {}),
+                customTextButton(d.productOlive, () {}),
+                customTextButton(d.productPepper, () {}),
               ],
             ),
           ),
@@ -99,12 +101,12 @@ class _mainPageState extends State<mainPage> {
             padding: const EdgeInsets.all(16.0),
             child: Column(
               children: [
-                customText("20 min", writeColor2, 22, fontWeight: FontWeight.bold),
+                customText(d.deliveryDuration, writeColor2, 22, fontWeight: FontWeight.bold),
                 Padding(
                   padding: const EdgeInsets.all(16.0),
-                  child: customText("Delivery", mainColor, 22, fontWeight: FontWeight.bold),
+                  child: customText(d.deliveryTitle, mainColor, 22, fontWeight: FontWeight.bold),
                 ),
-                SizedBox(child: customText("Meat lover, get ready meet your Pizza !", writeColor2, 22, textAlign: TextAlign.center)),
+                SizedBox(child: customText(d.explainPizza, writeColor2, 22, textAlign: TextAlign.center)),
               ],
             ), 
           ),
@@ -112,10 +114,10 @@ class _mainPageState extends State<mainPage> {
             padding: const EdgeInsets.all(8.0),
             child: Row(
               children: [
-                customText("\$ 5.98", mainColor, 44, fontWeight: FontWeight.bold),
+                customText(d.amount, mainColor, 44, fontWeight: FontWeight.bold),
                 const Spacer(),
                 SizedBox(width: 200, height: 50,
-                  child: customTextButton("ADD TO CART", () { }, size: 18, radius: 5)
+                  child: customTextButton(d.buttonTitle, () { }, size: 18, radius: 5)
                 ),
               ],
             ),

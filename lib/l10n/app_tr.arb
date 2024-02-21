@@ -1,12 +1,12 @@
 {
-    "Header.Pizza":"Etli Peynirli",
-    "Product.Cheese":"Peynir",
-    "Product.Sausage":"Sosis",
-    "Product.Olive":"Zeytin",
-    "Product.Pepper":"Biber",
-    "Delivery.Duration":"20 dk",
-    "Delivery.Title":"Teslimat",
-    "Explain.Pizza":"Et sever, pizzanla tanışmaya hazırlan !",
-    "Amount":"180 ₺",
-    "Button.Title":"SEPETE EKLE"
+    "headerPizza":"Etli Peynirli",
+    "productCheese":"Peynir",
+    "productSausage":"Sosis",
+    "productOlive":"Zeytin",
+    "productPepper":"Biber",
+    "deliveryDuration":"20 dk",
+    "deliveryTitle":"Teslimat",
+    "explainPizza":"Et sever, pizzanla tanışmaya hazırlan !",
+    "amount":"180 ₺",
+    "buttonTitle":"SEPETE EKLE"
 }
